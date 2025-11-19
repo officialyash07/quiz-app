@@ -1,0 +1,80 @@
+User Stories
+🟦 Basic Users
+
+US01: As a user, I want to start a quiz so I can answer questions.
+
+US02: As a user, I want to see one question at a time.
+
+US03: As a user, I want to select an answer from multiple options.
+
+US04: As a user, I want to see if my answer is correct (after quiz ends or immediately).
+
+US05: As a user, I want to move to the next question.
+
+US06: As a user, I want to see my total score at the end.
+
+🟧 Optional (Advanced)
+
+Timer per question
+
+Randomized questions
+
+Marked review questions
+
+Progress bar
+
+--------------------------------------------------------------------------
+
+Features
+Core
+
+✔ Show question + options
+✔ Select and lock an answer
+✔ Next button
+✔ Score calculation
+✔ Final result screen
+
+Optional
+
+✔ Restart quiz
+✔ Show correct answer after selection
+✔ Show question numbers
+✔ Store best score in localStorage
+
+----------------------------------------------------------------------------
+
+FlowChart
+
+           ┌──────────────────┐
+           │  User Starts Quiz│
+           └───────┬──────────┘
+                   │
+          ┌────────┴─────────┐
+          │ Load Questions   │
+          └────────┬─────────┘
+                   │
+         ┌─────────┴─────────┐
+         │ Show Current Qn   │
+         └─────────┬─────────┘
+                   │
+         ┌─────────┴─────────┐
+         │ User Selects Ans  │
+         └─────────┬─────────┘
+                   │
+         ┌─────────┴──────────────┐
+         │ Lock Answer + Save     │
+         └─────────┬──────────────┘
+                   │
+         ┌─────────┴──────────────┐
+         │ User Click Next        │
+         └─────────┬──────────────┘
+                   │
+       ┌───────────┴──────────────┐
+       │ More Questions?          │
+       ├────────────┬─────────────┤
+       │ Yes        │ No          │
+       └──────┬─────┴──────┬──────┘
+              │            │
+   ┌──────────┴────┐   ┌───┴──────────────────┐
+   │ Load Next Qn  │   │ Show Final Score     │
+   └───────────────┘   └──────────────────────┘
