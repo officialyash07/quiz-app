@@ -158,7 +158,7 @@ const questionsData = [
     },
     {
         question: "Inside which HTML tag is JS written?",
-        options: ["<javascript>", "<script>", "<js>", "<code>"],
+        options: ["javascript", "script", "js", "code"],
         correctOption: 1,
         hint: "A short, simple HTML tag.",
     },

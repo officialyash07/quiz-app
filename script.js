@@ -57,11 +57,6 @@ class Quiz {
                 </div>
                 <p>Hint: ${currentQuestion.hint}</p>
                 <div class="actionBtns">
-                    ${
-                        this.currentQuestionIndex === 0
-                            ? ""
-                            : `<button class="next-btn" onClick="quiz.loadPreviousQuestion()">Back</button>`
-                    }
                     <button id="nextBtn" class="next-btn" onClick=${
                         this.isFinished()
                             ? "quiz.submitQuiz()"
@@ -91,13 +86,6 @@ class Quiz {
     loadNextQuestion() {
         if (!this.isFinished()) {
             this.currentQuestionIndex++;
-            this.renderCurrentQuestion();
-        }
-    }
-
-    loadPreviousQuestion() {
-        if (this.currentQuestionIndex > 0) {
-            this.currentQuestionIndex--;
             this.renderCurrentQuestion();
         }
     }
