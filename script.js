@@ -2,6 +2,7 @@ const startQuizBtn = document.getElementById("start-quiz");
 const questionContainer = document.querySelector(".questionContainer");
 const mainSection = document.querySelector(".main");
 const submitContent = document.querySelector(".submitContent");
+const instructions = document.querySelector(".instructions");
 
 class Questions {
     constructor(question, options, correctOption, hint) {
@@ -139,6 +140,7 @@ class Quiz {
             <p style="font-size: 1.5rem; font-weight: bold;">Your final score is: <span>${
                 this.score
             } /${this.questions.length}</span></p>
+            <button id="restartBtn" class="next-btn" onClick="location.reload()" style="margin-top: 1rem;">Restart Quiz</button>
         </div>
         `;
     }
@@ -164,6 +166,7 @@ let quiz;
 startQuizBtn.addEventListener("click", () => {
     quiz = new Quiz(selectedRandomQuestion);
 
+    instructions.classList.add("hidden");
     startQuizBtn.classList.add("hidden");
     mainSection.classList.remove("hidden");
     quiz.renderCurrentQuestion();

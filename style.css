@@ -140,3 +140,19 @@ body {
 .hidden {
     display: none;
 }
+
+.instructions {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: left;
+
+    ul {
+        list-style-type: none;
+        color: #a2a2a2;
+
+        li {
+            margin-block: 1rem;
+        }
+    }
+}
